@@ -1,0 +1,27 @@
+.single-product {
+  display: flex;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  h2:hover {
+    color: var(--color-ascent);
+  }
+
+  .rating-author {
+    fa-icon {
+      color: var(--color-ascent)
+    }
+  }
+}

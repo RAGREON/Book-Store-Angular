@@ -1,0 +1,16 @@
+<div class="single-product">
+  <section class="image-wrapper"></section>
+  
+  <section class="product-info">
+    <h2>Kumo Desu ga, Nani ka? (Volume I)</h2>
+
+    <div class="rating-author">
+      <fa-icon
+        *ngFor="let star of starsArray; let idx = index"
+        [icon]="idx + 1 <= floor(rating) ? fullStar : 
+                idx + 0.1 <= rating ? halfStar : emptyStar"
+      />
+    </div>
+  </section>
+
+</div>

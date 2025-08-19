@@ -1,0 +1,13 @@
+<nav>
+  <ul class="">
+    <li
+      *ngFor="let link of navLinks"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a [routerLink]="link.path">
+        {{ link.label }}
+      </a>
+    </li>
+  </ul>
+</nav>
