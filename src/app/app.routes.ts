@@ -11,7 +11,8 @@ export const routes: Routes = [
   { path: 'about', component: About },
   { path: 'store', component: Store },
   { path: 'contact', component: Contact },
-  { path: 'single', component: Single }
+  { path: 'single', component: Single },
+  { path: 'single/:id', component: Single }
 ];
 
 @NgModule({
