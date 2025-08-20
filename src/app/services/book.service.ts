@@ -27,8 +27,6 @@ export class BookService {
   private cache = new Map<number, CachedBook>();
   private cacheDuration = 10 * 60 * 1000;
 
-
-
   constructor (private http: HttpClient) {}
   
   getBooks(): Observable<Book[]> {

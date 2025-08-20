@@ -5,11 +5,14 @@
 .product-info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: start;
+  gap: 1.5rem;
+  width: 600px;
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     font-weight: 400;
+    margin: 0;
     color: var(--color-primary);
     cursor: pointer;
     transition: color 0.3s;
@@ -20,8 +23,39 @@
   }
 
   .rating-author {
-    fa-icon {
-      color: var(--color-ascent)
+    display: flex;
+    gap: 1rem;
+
+    .stars {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+
+      .emptyStar {
+        color: var(--color-secondary);
+      }
+
+      fa-icon {
+        color: var(--color-ascent);
+
+      }
     }
+
+    .author {
+      display: flex;
+      gap: 1rem;
+
+      span {
+        color: var(--color-secondary);
+      }
+    }
+  }
+
+  #price {
+    font-size: 1.25rem;
+  }
+
+  #description {
+    margin: 0;
   }
 }

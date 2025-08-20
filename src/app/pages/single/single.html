@@ -1,16 +1,24 @@
-<div class="single-product">
+<div class="single-product" *ngIf="book$ | async as book">
   <section class="image-wrapper"></section>
-  
+
   <section class="product-info">
-    <h2>Kumo Desu ga, Nani ka? (Volume I)</h2>
+    <h2> {{ book.name }} </h2>
 
     <div class="rating-author">
-      <fa-icon
-        *ngFor="let star of starsArray; let idx = index"
-        [icon]="idx + 1 <= floor(rating) ? fullStar : 
-                idx + 0.1 <= rating ? halfStar : emptyStar"
-      />
-    </div>
-  </section>
+      <div class="stars" *ngIf="averageRating$ | async as rating">
+        <fa-icon
+          *ngFor="let icon of getStars(rating)"
+          [icon]="icon"
+          [class.emptyStar]="icon === emptyStar"
+        />
+      </div>
 
+      <span id="total-reviews" *ngIf="reviews$ | async as reviews">({{ reviews.length }})</span>
+      <span class="author">By (author) <span>Okina Baba</span> </span>
+    </div>
+
+    <span id="price">$29.95 - $59.95</span>
+
+    <p id="description"> {{ book.description }} </p>
+  </section>
 </div>
