@@ -2,7 +2,7 @@
   <section class="image-wrapper"></section>
 
   <section class="product-info">
-    <h2> {{ book.name }} </h2>
+    <h2> {{ book.title }} </h2>
 
     <div class="rating-author">
       <div class="stars" *ngIf="averageRating$ | async as rating">
@@ -14,7 +14,7 @@
       </div>
 
       <span id="total-reviews" *ngIf="reviews$ | async as reviews">({{ reviews.length }})</span>
-      <span class="author">By (author) <span>Okina Baba</span> </span>
+      <span class="author">By (author) <span> {{ book.author }} </span> </span>
     </div>
 
     <span id="price">$29.95 - $59.95</span>

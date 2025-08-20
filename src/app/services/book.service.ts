@@ -9,7 +9,8 @@ export interface GenreDto {
 
 export interface Book {
   id: number,
-  name: string,
+  title: string,
+  author: string,
   releaseDate: string,
   description: string,
   genres: []
