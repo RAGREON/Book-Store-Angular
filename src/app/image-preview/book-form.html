@@ -1,0 +1,20 @@
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="form">
+  <label for="title">Title:</label>
+  <input id="title" type="text" formControlName="title">
+
+
+  <label for="author">Author:</label>
+  <input id="author" type="text" formControlName="author">
+
+  <label for="releaseDate">Release Date:</label>
+  <input id="releaseDate" type="date" formControlName="releaseDate">
+
+  <input #fileInput type="file" (change)="onFileSelected($event)" accept="image/*">
+
+  <div *ngIf="previewUrl">
+    <p>Image preview:</p>
+    <img [src]="previewUrl" alt="image preview" style="max-width: 400px;">
+  </div>
+
+  <button type="submit" [disabled]="bookForm.invalid">Submit</button>
+</form>
